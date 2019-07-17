@@ -7,24 +7,25 @@ import com.eway.payment.sdk.android.beans.Customer;
 import com.eway.payment.sdk.android.beans.Payment;
 import com.eway.payment.sdk.android.beans.Transaction;
 import com.eway.payment.sdk.android.beans.TransactionType;
+import com.eway.payment.sdk.android.entities.SubmitPayResponse;
+import com.facebook.react.bridge.Promise;
 
 import java.io.IOException;
 import java.util.UUID;
 
 public class EwayPayments {
 
-  public EwayPayments() {
-    RapidAPI.RapidEndpoint = "Sandbox";
+  public EwayPayments(String key) {
+    RapidAPI.RapidEndpoint = "https://api.sandbox.ewaypayments.com";
+    RapidAPI.PublicAPIKey = key;
   }
 
   public void pay(
           EWayCardDetail eWayCardDetail,
           EWayCustomer eWayCustomer,
-          EWayPaymentDetail eWayPaymentDetail
-  ) {
-    // KEY
-    RapidAPI.PublicAPIKey = RNEwayPaymentsModule.KEY;
-
+          EWayPaymentDetail eWayPaymentDetail,
+          Promise promise
+  ) throws RapidConfigurationException {
     // CARD DETAIL
     String name = eWayCardDetail.name;
     String number = eWayCardDetail.number;
@@ -67,11 +68,12 @@ public class EwayPayments {
     transaction.setPayment(payment);
 
     try {
-      RapidAPI.submitPayment(transaction);
+      SubmitPayResponse response = RapidAPI.submitPayment(transaction);
+      promise.resolve(response.getStatus());
     } catch (IOException e) {
-      e.printStackTrace();
+      promise.reject(e.getMessage());
     } catch (RapidConfigurationException $error) {
-      $error.printStackTrace();
+      promise.reject($error.getErrorCodes());
     }
   }
 }

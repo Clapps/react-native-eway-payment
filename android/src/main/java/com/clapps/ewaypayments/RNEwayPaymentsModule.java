@@ -1,14 +1,20 @@
 package com.clapps.ewaypayments;
 
+import com.eway.payment.sdk.android.RapidConfigurationException;
+import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 
 public class RNEwayPaymentsModule extends ReactContextBaseJavaModule {
 
-  private final ReactApplicationContext reactContext;
-  private final EwayPayments ewayPayments;
+  private static final String SANDBOX_URL = "https://api.sandbox.ewaypayments.com";
+  private static final String PRODUCTION_URL = "https://api.ewaypayments.com";
+  private static  String URL = PRODUCTION_URL;
 
+  private final ReactApplicationContext reactContext;
+
+  private EwayPayments ewayPayments;
   private EWayCardDetail eWayCardDetail;
   private EWayCustomer eWayCustomer;
   private EWayPaymentDetail eWayPaymentDetail;
@@ -17,7 +23,6 @@ public class RNEwayPaymentsModule extends ReactContextBaseJavaModule {
   public RNEwayPaymentsModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
-    this.ewayPayments = new EwayPayments();
   }
 
   @Override
@@ -26,8 +31,18 @@ public class RNEwayPaymentsModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void setUpKey(String key) {
-    RNEwayPaymentsModule.KEY = key;
+  public void build(String key) {
+    this.ewayPayments = new EwayPayments(key);
+  }
+
+  @ReactMethod
+  public void sandbox() {
+    this.URL = SANDBOX_URL;
+  }
+
+  @ReactMethod
+  public void production() {
+    this.URL = PRODUCTION_URL;
   }
 
   @ReactMethod
@@ -52,11 +67,12 @@ public class RNEwayPaymentsModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void pay() {
+  public void pay(Promise promise) throws RapidConfigurationException {
     this.ewayPayments.pay(
             this.eWayCardDetail,
             this.eWayCustomer,
-            this.eWayPaymentDetail
+            this.eWayPaymentDetail,
+            promise
     );
   }
 }
