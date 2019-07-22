@@ -7,8 +7,138 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9726154822E5FBDA000AA69D /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9726152922E5FBC6000AA69D /* libReact.a */; };
+		972615D322E609A2000AA69D /* ShippingDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 972615B522E609A1000AA69D /* ShippingDetails.m */; };
+		972615D422E609A2000AA69D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 972615B722E609A1000AA69D /* Reachability.m */; };
+		972615D522E609A2000AA69D /* RapidAPI+ApplePay.m in Sources */ = {isa = PBXBuildFile; fileRef = 972615B822E609A1000AA69D /* RapidAPI+ApplePay.m */; };
+		972615D622E609A2000AA69D /* EncryptValuesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 972615B922E609A1000AA69D /* EncryptValuesResponse.m */; };
+		972615D722E609A2000AA69D /* UserMessageResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 972615BF22E609A1000AA69D /* UserMessageResponse.m */; };
+		972615D822E609A2000AA69D /* CardDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 972615C122E609A1000AA69D /* CardDetails.m */; };
+		972615D922E609A2000AA69D /* RapidAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 972615C322E609A1000AA69D /* RapidAPI.m */; };
+		972615DA22E609A2000AA69D /* LineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 972615C422E609A1000AA69D /* LineItem.m */; };
+		972615DB22E609A2000AA69D /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 972615C622E609A2000AA69D /* Address.m */; };
+		972615DC22E609A2000AA69D /* Payment.m in Sources */ = {isa = PBXBuildFile; fileRef = 972615C922E609A2000AA69D /* Payment.m */; };
+		972615DD22E609A2000AA69D /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 972615CB22E609A2000AA69D /* Customer.m */; };
+		972615DE22E609A2000AA69D /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 972615CD22E609A2000AA69D /* Transaction.m */; };
+		972615DF22E609A2000AA69D /* NVpair.m in Sources */ = {isa = PBXBuildFile; fileRef = 972615CE22E609A2000AA69D /* NVpair.m */; };
+		972615E022E609A2000AA69D /* SubmitPaymentResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 972615CF22E609A2000AA69D /* SubmitPaymentResponse.m */; };
 		B3E7B58A1CC2AC0600A0062D /* RNEwayPayments.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNEwayPayments.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9726152822E5FBC6000AA69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9726151522E5FBC6000AA69D /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
+			remoteInfo = React;
+		};
+		9726152A22E5FBC6000AA69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9726151522E5FBC6000AA69D /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28131D9B038B00D4039D;
+			remoteInfo = "React-tvOS";
+		};
+		9726152C22E5FBC6000AA69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9726151522E5FBC6000AA69D /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3C059A1DE3340900C268FA;
+			remoteInfo = yoga;
+		};
+		9726152E22E5FBC6000AA69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9726151522E5FBC6000AA69D /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3C06751DE3340C00C268FA;
+			remoteInfo = "yoga-tvOS";
+		};
+		9726153022E5FBC6000AA69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9726151522E5FBC6000AA69D /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9251DE5FBEC00167DC4;
+			remoteInfo = cxxreact;
+		};
+		9726153222E5FBC6000AA69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9726151522E5FBC6000AA69D /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9321DE5FBEE00167DC4;
+			remoteInfo = "cxxreact-tvOS";
+		};
+		9726153422E5FBC6000AA69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9726151522E5FBC6000AA69D /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD90B1DE5FBD600167DC4;
+			remoteInfo = jschelpers;
+		};
+		9726153622E5FBC6000AA69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9726151522E5FBC6000AA69D /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9181DE5FBD800167DC4;
+			remoteInfo = "jschelpers-tvOS";
+		};
+		9726153822E5FBC6000AA69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9726151522E5FBC6000AA69D /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EBF21BDC1FC498900052F4D5;
+			remoteInfo = jsinspector;
+		};
+		9726153A22E5FBC6000AA69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9726151522E5FBC6000AA69D /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EBF21BFA1FC4989A0052F4D5;
+			remoteInfo = "jsinspector-tvOS";
+		};
+		9726153C22E5FBC6000AA69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9726151522E5FBC6000AA69D /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 139D7ECE1E25DB7D00323FB7;
+			remoteInfo = "third-party";
+		};
+		9726153E22E5FBC6000AA69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9726151522E5FBC6000AA69D /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D383D3C1EBD27B6005632C8;
+			remoteInfo = "third-party-tvOS";
+		};
+		9726154022E5FBC6000AA69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9726151522E5FBC6000AA69D /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 139D7E881E25C6D100323FB7;
+			remoteInfo = "double-conversion";
+		};
+		9726154222E5FBC6000AA69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9726151522E5FBC6000AA69D /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D383D621EBD27B9005632C8;
+			remoteInfo = "double-conversion-tvOS";
+		};
+		9726154422E5FBC6000AA69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9726151522E5FBC6000AA69D /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9936F3131F5F2E4B0010BF04;
+			remoteInfo = privatedata;
+		};
+		9726154622E5FBC6000AA69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9726151522E5FBC6000AA69D /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9936F32F1F5F2E5B0010BF04;
+			remoteInfo = "privatedata-tvOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		58B511D91A9E6C8500147676 /* CopyFiles */ = {
@@ -24,6 +154,37 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNEwayPayments.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNEwayPayments.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9726151522E5FBC6000AA69D /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		972615B522E609A1000AA69D /* ShippingDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShippingDetails.m; sourceTree = "<group>"; };
+		972615B622E609A1000AA69D /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		972615B722E609A1000AA69D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		972615B822E609A1000AA69D /* RapidAPI+ApplePay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RapidAPI+ApplePay.m"; sourceTree = "<group>"; };
+		972615B922E609A1000AA69D /* EncryptValuesResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptValuesResponse.m; sourceTree = "<group>"; };
+		972615BA22E609A1000AA69D /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
+		972615BB22E609A1000AA69D /* NVpair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVpair.h; sourceTree = "<group>"; };
+		972615BC22E609A1000AA69D /* CardDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardDetails.h; sourceTree = "<group>"; };
+		972615BD22E609A1000AA69D /* Enumerated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enumerated.h; sourceTree = "<group>"; };
+		972615BE22E609A1000AA69D /* Payment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Payment.h; sourceTree = "<group>"; };
+		972615BF22E609A1000AA69D /* UserMessageResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMessageResponse.m; sourceTree = "<group>"; };
+		972615C022E609A1000AA69D /* LineItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineItem.h; sourceTree = "<group>"; };
+		972615C122E609A1000AA69D /* CardDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardDetails.m; sourceTree = "<group>"; };
+		972615C222E609A1000AA69D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		972615C322E609A1000AA69D /* RapidAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RapidAPI.m; sourceTree = "<group>"; };
+		972615C422E609A1000AA69D /* LineItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineItem.m; sourceTree = "<group>"; };
+		972615C522E609A2000AA69D /* ShippingDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShippingDetails.h; sourceTree = "<group>"; };
+		972615C622E609A2000AA69D /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
+		972615C722E609A2000AA69D /* SubmitPaymentResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitPaymentResponse.h; sourceTree = "<group>"; };
+		972615C822E609A2000AA69D /* RapidAPI+ApplePay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RapidAPI+ApplePay.h"; sourceTree = "<group>"; };
+		972615C922E609A2000AA69D /* Payment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Payment.m; sourceTree = "<group>"; };
+		972615CA22E609A2000AA69D /* UserMessageResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMessageResponse.h; sourceTree = "<group>"; };
+		972615CB22E609A2000AA69D /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
+		972615CC22E609A2000AA69D /* eWAYSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eWAYSDK.h; sourceTree = "<group>"; };
+		972615CD22E609A2000AA69D /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
+		972615CE22E609A2000AA69D /* NVpair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVpair.m; sourceTree = "<group>"; };
+		972615CF22E609A2000AA69D /* SubmitPaymentResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitPaymentResponse.m; sourceTree = "<group>"; };
+		972615D022E609A2000AA69D /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
+		972615D122E609A2000AA69D /* RapidAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RapidAPI.h; sourceTree = "<group>"; };
+		972615D222E609A2000AA69D /* EncryptValuesResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncryptValuesResponse.h; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNEwayPayments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNEwayPayments.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNEwayPayments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNEwayPayments.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -33,6 +194,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9726154822E5FBDA000AA69D /* libReact.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,10 +212,80 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				972615A422E60947000AA69D /* EWayPayments */,
 				B3E7B5881CC2AC0600A0062D /* RNEwayPayments.h */,
 				B3E7B5891CC2AC0600A0062D /* RNEwayPayments.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				9726151422E5FBC6000AA69D /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		9726151422E5FBC6000AA69D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9726151522E5FBC6000AA69D /* React.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9726151622E5FBC6000AA69D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9726152922E5FBC6000AA69D /* libReact.a */,
+				9726152B22E5FBC6000AA69D /* libReact.a */,
+				9726152D22E5FBC6000AA69D /* libyoga.a */,
+				9726152F22E5FBC6000AA69D /* libyoga.a */,
+				9726153122E5FBC6000AA69D /* libcxxreact.a */,
+				9726153322E5FBC6000AA69D /* libcxxreact.a */,
+				9726153522E5FBC6000AA69D /* libjschelpers.a */,
+				9726153722E5FBC6000AA69D /* libjschelpers.a */,
+				9726153922E5FBC6000AA69D /* libjsinspector.a */,
+				9726153B22E5FBC6000AA69D /* libjsinspector-tvOS.a */,
+				9726153D22E5FBC6000AA69D /* libthird-party.a */,
+				9726153F22E5FBC6000AA69D /* libthird-party.a */,
+				9726154122E5FBC6000AA69D /* libdouble-conversion.a */,
+				9726154322E5FBC6000AA69D /* libdouble-conversion.a */,
+				9726154522E5FBC6000AA69D /* libprivatedata.a */,
+				9726154722E5FBC6000AA69D /* libprivatedata-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		972615A422E60947000AA69D /* EWayPayments */ = {
+			isa = PBXGroup;
+			children = (
+				972615B622E609A1000AA69D /* Address.h */,
+				972615C622E609A2000AA69D /* Address.m */,
+				972615BC22E609A1000AA69D /* CardDetails.h */,
+				972615C122E609A1000AA69D /* CardDetails.m */,
+				972615BA22E609A1000AA69D /* Customer.h */,
+				972615CB22E609A2000AA69D /* Customer.m */,
+				972615D222E609A2000AA69D /* EncryptValuesResponse.h */,
+				972615B922E609A1000AA69D /* EncryptValuesResponse.m */,
+				972615BD22E609A1000AA69D /* Enumerated.h */,
+				972615CC22E609A2000AA69D /* eWAYSDK.h */,
+				972615C022E609A1000AA69D /* LineItem.h */,
+				972615C422E609A1000AA69D /* LineItem.m */,
+				972615BB22E609A1000AA69D /* NVpair.h */,
+				972615CE22E609A2000AA69D /* NVpair.m */,
+				972615BE22E609A1000AA69D /* Payment.h */,
+				972615C922E609A2000AA69D /* Payment.m */,
+				972615D122E609A2000AA69D /* RapidAPI.h */,
+				972615C322E609A1000AA69D /* RapidAPI.m */,
+				972615C822E609A2000AA69D /* RapidAPI+ApplePay.h */,
+				972615B822E609A1000AA69D /* RapidAPI+ApplePay.m */,
+				972615C222E609A1000AA69D /* Reachability.h */,
+				972615B722E609A1000AA69D /* Reachability.m */,
+				972615C522E609A2000AA69D /* ShippingDetails.h */,
+				972615B522E609A1000AA69D /* ShippingDetails.m */,
+				972615C722E609A2000AA69D /* SubmitPaymentResponse.h */,
+				972615CF22E609A2000AA69D /* SubmitPaymentResponse.m */,
+				972615D022E609A2000AA69D /* Transaction.h */,
+				972615CD22E609A2000AA69D /* Transaction.m */,
+				972615CA22E609A2000AA69D /* UserMessageResponse.h */,
+				972615BF22E609A1000AA69D /* UserMessageResponse.m */,
+			);
+			path = EWayPayments;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,11 +327,18 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
 			productRefGroup = 58B511D21A9E6C8500147676;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9726151622E5FBC6000AA69D /* Products */;
+					ProjectRef = 9726151522E5FBC6000AA69D /* React.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				58B511DA1A9E6C8500147676 /* RNEwayPayments */,
@@ -107,12 +346,141 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		9726152922E5FBC6000AA69D /* libReact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReact.a;
+			remoteRef = 9726152822E5FBC6000AA69D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9726152B22E5FBC6000AA69D /* libReact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReact.a;
+			remoteRef = 9726152A22E5FBC6000AA69D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9726152D22E5FBC6000AA69D /* libyoga.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libyoga.a;
+			remoteRef = 9726152C22E5FBC6000AA69D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9726152F22E5FBC6000AA69D /* libyoga.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libyoga.a;
+			remoteRef = 9726152E22E5FBC6000AA69D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9726153122E5FBC6000AA69D /* libcxxreact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcxxreact.a;
+			remoteRef = 9726153022E5FBC6000AA69D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9726153322E5FBC6000AA69D /* libcxxreact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcxxreact.a;
+			remoteRef = 9726153222E5FBC6000AA69D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9726153522E5FBC6000AA69D /* libjschelpers.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjschelpers.a;
+			remoteRef = 9726153422E5FBC6000AA69D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9726153722E5FBC6000AA69D /* libjschelpers.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjschelpers.a;
+			remoteRef = 9726153622E5FBC6000AA69D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9726153922E5FBC6000AA69D /* libjsinspector.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjsinspector.a;
+			remoteRef = 9726153822E5FBC6000AA69D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9726153B22E5FBC6000AA69D /* libjsinspector-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libjsinspector-tvOS.a";
+			remoteRef = 9726153A22E5FBC6000AA69D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9726153D22E5FBC6000AA69D /* libthird-party.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libthird-party.a";
+			remoteRef = 9726153C22E5FBC6000AA69D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9726153F22E5FBC6000AA69D /* libthird-party.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libthird-party.a";
+			remoteRef = 9726153E22E5FBC6000AA69D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9726154122E5FBC6000AA69D /* libdouble-conversion.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libdouble-conversion.a";
+			remoteRef = 9726154022E5FBC6000AA69D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9726154322E5FBC6000AA69D /* libdouble-conversion.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libdouble-conversion.a";
+			remoteRef = 9726154222E5FBC6000AA69D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9726154522E5FBC6000AA69D /* libprivatedata.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libprivatedata.a;
+			remoteRef = 9726154422E5FBC6000AA69D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9726154722E5FBC6000AA69D /* libprivatedata-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libprivatedata-tvOS.a";
+			remoteRef = 9726154622E5FBC6000AA69D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				972615DA22E609A2000AA69D /* LineItem.m in Sources */,
+				972615D622E609A2000AA69D /* EncryptValuesResponse.m in Sources */,
+				972615DE22E609A2000AA69D /* Transaction.m in Sources */,
+				972615D722E609A2000AA69D /* UserMessageResponse.m in Sources */,
+				972615DC22E609A2000AA69D /* Payment.m in Sources */,
+				972615E022E609A2000AA69D /* SubmitPaymentResponse.m in Sources */,
+				972615D322E609A2000AA69D /* ShippingDetails.m in Sources */,
+				972615D822E609A2000AA69D /* CardDetails.m in Sources */,
+				972615D422E609A2000AA69D /* Reachability.m in Sources */,
+				972615DD22E609A2000AA69D /* Customer.m in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNEwayPayments.m in Sources */,
+				972615D522E609A2000AA69D /* RapidAPI+ApplePay.m in Sources */,
+				972615DB22E609A2000AA69D /* Address.m in Sources */,
+				972615D922E609A2000AA69D /* RapidAPI.m in Sources */,
+				972615DF22E609A2000AA69D /* NVpair.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +572,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-				"$(inherited)",
+					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",

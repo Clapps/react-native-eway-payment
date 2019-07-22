@@ -1,11 +1,6 @@
-
-#if __has_include("RCTBridgeModule.h")
-#import "RCTBridgeModule.h"
-#else
 #import <React/RCTBridgeModule.h>
-#endif
+#import "eWAYPaymentsSDKAppDelegate.h"
+#import "RapidAPI.h"
 
 @interface RNEwayPayments : NSObject <RCTBridgeModule>
-
 @end
-  
