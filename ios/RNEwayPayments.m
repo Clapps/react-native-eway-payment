@@ -11,7 +11,7 @@ RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(build:(NSString *)key) {
     [[RapidAPI sharedManager] setRapidEndpoint:@"https://api.sandbox.ewaypayments.com/"];
-    [[RapidAPI sharedManager] setPublicAPIKey:@"epk-2C73830F-7F82-485F-BC15-BA4BAD38F4AD"];
+    [[RapidAPI sharedManager] setPublicAPIKey:key];
 
     customer = [[Customer alloc] init];
     cardDetails = [[CardDetails alloc] init];
@@ -41,21 +41,24 @@ RCT_EXPORT_METHOD(setCardDetail:(NSString *)name
 
 RCT_EXPORT_METHOD(setCustomerDetail:(NSString *)name
                   lastName:(NSString *)lastName
-                  ) {
+) {
     customer.FirstName = name;
     customer.LastName = lastName;
 }
 
 RCT_EXPORT_METHOD(setPaymentDetail:(NSString *)currencyCode
-                  totalAmount:(nonnull NSNumber *)totalAmount
+                  totalAmount:(nonnull int *)totalAmount
                   invoiceDescription:(NSString *)invoiceDescription
-                  ) {
+) {
     payment.Payment = totalAmount;
     payment.InvoiceDescription = invoiceDescription;
     payment.CurrencyCode = currencyCode;
 }
 
-RCT_EXPORT_METHOD(pay) {
+RCT_REMAP_METHOD(pay,
+                  findEventsWithResolver:(RCTPromiseResolveBlock)resolve
+                  rejecter:(RCTPromiseRejectBlock)reject
+) {
     Transaction *transaction = [[Transaction alloc] init];
     customer.CardDetails = cardDetails;
     transaction.Customer = customer;
@@ -63,6 +66,14 @@ RCT_EXPORT_METHOD(pay) {
 
     [RapidAPI submitPayment:transaction completed:^(SubmitPaymentResponse *submitPaymentResponse) {
         NSString *submissionID = submitPaymentResponse.SubmissionID;
+        NSString *error = submitPaymentResponse.Errors;
+        if ([error isEqual:@"<null>"]) {
+            resolve(submissionID);
+        } else {
+            NSError *error = nil;
+            NSLog(@"%@",error);
+            reject(@"PAYMENT_ERROR", submitPaymentResponse.Errors, error);
+        }
     }];
 }
 

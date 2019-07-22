@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9726154822E5FBDA000AA69D /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9726152922E5FBC6000AA69D /* libReact.a */; };
 		972615D322E609A2000AA69D /* ShippingDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 972615B522E609A1000AA69D /* ShippingDetails.m */; };
 		972615D422E609A2000AA69D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 972615B722E609A1000AA69D /* Reachability.m */; };
 		972615D522E609A2000AA69D /* RapidAPI+ApplePay.m in Sources */ = {isa = PBXBuildFile; fileRef = 972615B822E609A1000AA69D /* RapidAPI+ApplePay.m */; };
@@ -194,7 +193,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9726154822E5FBDA000AA69D /* libReact.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
